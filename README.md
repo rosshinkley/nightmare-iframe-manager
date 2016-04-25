@@ -4,7 +4,7 @@ nightmare-iframe-manager
 Add inline iframe management to your [Nightmare](http://github.com/segmentio/nightmare) scripts.
 
 ## Credit
-Original idea was thanks to @tiangolo in segmentio/nightmare#496.
+Original idea was thanks to @tiangolo in [segmentio/nightmare#496](https://github.com/segmentio/nightmare/pull/496).
 
 # _WARNING_
 This plugin overrides Nightmare's internal `evaluate_now` method to wrap the page's `document` variable.  This is dangerous and fragile.  After entering an iframe, certain functionality may not work as expected.  Read the pull in the credit link for more information.  _You have been warned._
