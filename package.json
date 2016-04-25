@@ -1,0 +1,34 @@
+{
+  "name": "nightmare-iframe-manager",
+  "version": "0.0.1",
+  "description": "delegates commands to iframes in Nightmare",
+  "main": "nightmare-iframe.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "nightmare",
+    "phantomjs",
+    "iframe",
+    "iframes"
+  ],
+  "author": "Ross Hinkley",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rosshinkley/nightmare-iframe-manager.git"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "nightmare": "^2.3.4"
+  },
+  "devDependencies": {
+    "express": "^4.13.4",
+    "mocha-generators": "^1.2.0",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "license": "MIT"
+}
