@@ -10,11 +10,10 @@ var chai = require('chai');
 var url = require('url');
 var server = require('./server');
 var path = require('path');
-var rimraf = require('rimraf');
 var child_process = require('child_process');
 var should = chai.should();
 
-require('../nightmare-iframe');
+require('../nightmare-iframe')(Nightmare);
 
 /**
  * Get rid of a warning.

@@ -10,10 +10,11 @@ Original idea was thanks to @tiangolo in [segmentio/nightmare#496](https://githu
 This plugin overrides Nightmare's internal `evaluate_now` method to wrap the page's `document` variable.  This is dangerous and fragile.  After entering an iframe, certain functionality may not work as expected.  Read the pull in the credit link for more information.  _You have been warned._
 
 ## Usage
-Require the library: 
+Require the library, passing the Nightmare constructor as a parameter: 
 
 ```js
-require('nightmare-iframe-manager')
+var Nightmare = require('nightmare');
+require('nightmare-iframe-manager')(Nightmare);
 ```
 
 ... and that's it.  You should now be able to enter and exit iframes.
@@ -30,7 +31,8 @@ Resets all frames and restores the root document.
 ## Example
 
 ```javascript
-require('nightmare-iframe-manager');
+var Nightmare = require('nightmare');
+require('nightmare-iframe-manager')(Nightmare);
 var nightmare = Nightmare();
 nightmare.goto('http://example.com')
   .enterIFrame('#someIFrame')

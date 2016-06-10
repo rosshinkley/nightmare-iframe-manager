@@ -17,15 +17,18 @@
     "type": "git",
     "url": "https://github.com/rosshinkley/nightmare-iframe-manager.git"
   },
+  "peerDependencies":{
+    "nightmare": "^2.3.0"
+  },
   "dependencies": {
-    "debug": "^2.2.0",
-    "nightmare": "^2.3.4"
+    "debug": "^2.2.0"
   },
   "devDependencies": {
     "express": "^4.13.4",
     "mocha-generators": "^1.2.0",
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "serve-static": "^1.10.0"
   },
   "scripts": {
     "test": "mocha test"
