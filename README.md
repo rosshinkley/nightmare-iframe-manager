@@ -41,3 +41,15 @@ nightmare.goto('http://example.com')
     // `title` is the title of the child frame #someIFrame
   })
 ```
+
+## Common Issues
+### Blocked iFrame Cross-Origin Communication
+```javascript
+var nightmare = Nightmare({
+  show:true,
+  webPreferences: {
+    webSecurity:false
+    }
+  })
+```
+When webSecurity is set to false, it will disable the same-origin policy (usually using testing websites by people), and set allowDisplayingInsecureContent and allowRunningInsecureContent to true if these two options are not set by user. Default is true.
