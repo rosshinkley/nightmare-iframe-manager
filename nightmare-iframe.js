@@ -6,10 +6,9 @@ module.exports = exports = function(Nightmare) {
     var template = require(path.resolve(path.dirname(require.resolve('nightmare')), 'javascript'));
     var child = this.child;
 
-    var args = Array.prototype.slice.call(arguments)
-      .slice(2);
-    var argsList = JSON.stringify(args)
-      .slice(1, -1);
+    var args = Array.prototype.slice.call(arguments).slice(2).map(a=> {
+      return { argument: JSON.stringify(a) };
+    });
 
     var sendJsFn = String(function() {
       var document = window.top.document;
@@ -28,7 +27,7 @@ module.exports = exports = function(Nightmare) {
 
     child.call('javascript', template.execute({
       src: sendJsFn,
-      args: argsList
+      args: args
     }), done);
 
     return this;

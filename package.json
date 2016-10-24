@@ -18,7 +18,7 @@
     "url": "https://github.com/rosshinkley/nightmare-iframe-manager.git"
   },
   "peerDependencies":{
-    "nightmare": "^2.3.0"
+    "nightmare": "^2.8.0"
   },
   "dependencies": {
     "debug": "^2.2.0"
